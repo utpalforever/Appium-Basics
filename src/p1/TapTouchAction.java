@@ -39,7 +39,7 @@ public class TapTouchAction {
 		TouchAction ta=new TouchAction(driver);
 		ta.tap(tapOptions().withElement(element(tapElement))).perform();
 		
-		//checking branch push
+		//check
 
 	}
 
