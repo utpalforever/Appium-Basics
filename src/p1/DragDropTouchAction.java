@@ -15,7 +15,6 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.touch.LongPressOptions;
-import io.appium.java_client.touch.TapOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 
 public class DragDropTouchAction {
@@ -43,9 +42,10 @@ public class DragDropTouchAction {
 
 		// Below also can be used
 		((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.BACK));
+		
 		driver.findElementByXPath("//android.widget.TextView[@text='Drag and Drop']").click();
 
 		Thread.sleep(2000);
-		t.longPress(ElementOption.element(src)).moveTo(ElementOption.element(des)).perform().release();//StaleElementException
+		t.longPress(ElementOption.element(src)).moveTo(ElementOption.element(des)).perform().release();// StaleElementException
 	}
 }
